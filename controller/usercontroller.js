@@ -7,7 +7,7 @@ const users = require("../models/user")
 mongoose.connect('mongodb://localhost:27017/compony',{useNewUrlParser: true,useUnifiedTopology: true});
 mongoose.connection.once('open',()=>{
     console.log("connection made")
-}).on('error',()=>{
+}).on('error',(error)=>{
     console.log(error)
 })
 
