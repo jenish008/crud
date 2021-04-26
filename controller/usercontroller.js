@@ -61,10 +61,10 @@ const updateUser = async (req, res) => {
         }
         const { id } = req.body;
 
-        await userModel
+        await users
             .findOneAndUpdate(
                 { id: query },
-                { $set: { username: username } },
+                { $set: { number: number } },
                 { new: true }
             )
             .then(data => {
